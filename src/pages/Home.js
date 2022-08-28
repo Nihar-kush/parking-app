@@ -14,6 +14,14 @@ export default function Home() {
   });
 
   const feedData = () => {
+    if (!data.name) {
+      alert("name is required");
+      return;
+    }
+    if (!data.vehicleNumber) {
+      alert("vehicleNumber is required");
+      return;
+    }
     let updatedParkingSlots = [...parkingSlots];
     updatedParkingSlots[selected] = {
       ...data,
